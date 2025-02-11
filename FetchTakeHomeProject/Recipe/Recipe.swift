@@ -7,6 +7,11 @@
 
 import Foundation
 
+// Root response model
+struct RecipeResponse: Codable {
+    let recipes: [Recipe]
+}
+
 struct Recipe: Codable, Hashable {
     
     let cuisine: String
