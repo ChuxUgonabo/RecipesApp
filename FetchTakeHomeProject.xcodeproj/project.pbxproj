@@ -14,6 +14,10 @@
 		84B6D3402D488668009D8ECC /* FetchTakeHomeProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6D33F2D488668009D8ECC /* FetchTakeHomeProjectTests.swift */; };
 		84B6D34A2D488668009D8ECC /* FetchTakeHomeProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6D3492D488668009D8ECC /* FetchTakeHomeProjectUITests.swift */; };
 		84B6D34C2D488668009D8ECC /* FetchTakeHomeProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6D34B2D488668009D8ECC /* FetchTakeHomeProjectUITestsLaunchTests.swift */; };
+		84B6D35A2D4887A3009D8ECC /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6D3592D4887A3009D8ECC /* Recipe.swift */; };
+		84B6D35D2D4B4FE7009D8ECC /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6D35C2D4B4FE7009D8ECC /* APIService.swift */; };
+		84CB20F22D5ACCF200224EB8 /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CB20F12D5ACCF200224EB8 /* RecipeViewModel.swift */; };
+		84CB20F42D5AE41000224EB8 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CB20F32D5AE41000224EB8 /* ImageCacheManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		84B6D3452D488668009D8ECC /* FetchTakeHomeProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchTakeHomeProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B6D3492D488668009D8ECC /* FetchTakeHomeProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTakeHomeProjectUITests.swift; sourceTree = "<group>"; };
 		84B6D34B2D488668009D8ECC /* FetchTakeHomeProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTakeHomeProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		84B6D3592D4887A3009D8ECC /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		84B6D35C2D4B4FE7009D8ECC /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		84CB20F12D5ACCF200224EB8 /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
+		84CB20F32D5AE41000224EB8 /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +104,8 @@
 			children = (
 				84B6D32E2D488664009D8ECC /* FetchTakeHomeProjectApp.swift */,
 				84B6D3302D488664009D8ECC /* ContentView.swift */,
+				84B6D35B2D4887CB009D8ECC /* Recipe */,
+				84B6D3582D488755009D8ECC /* Services */,
 				84B6D3322D488667009D8ECC /* Assets.xcassets */,
 				84B6D3342D488667009D8ECC /* Preview Content */,
 			);
@@ -125,6 +135,24 @@
 				84B6D34B2D488668009D8ECC /* FetchTakeHomeProjectUITestsLaunchTests.swift */,
 			);
 			path = FetchTakeHomeProjectUITests;
+			sourceTree = "<group>";
+		};
+		84B6D3582D488755009D8ECC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				84B6D35C2D4B4FE7009D8ECC /* APIService.swift */,
+				84CB20F32D5AE41000224EB8 /* ImageCacheManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		84B6D35B2D4887CB009D8ECC /* Recipe */ = {
+			isa = PBXGroup;
+			children = (
+				84CB20F12D5ACCF200224EB8 /* RecipeViewModel.swift */,
+				84B6D3592D4887A3009D8ECC /* Recipe.swift */,
+			);
+			path = Recipe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +285,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B6D35A2D4887A3009D8ECC /* Recipe.swift in Sources */,
 				84B6D3312D488664009D8ECC /* ContentView.swift in Sources */,
+				84CB20F42D5AE41000224EB8 /* ImageCacheManager.swift in Sources */,
+				84B6D35D2D4B4FE7009D8ECC /* APIService.swift in Sources */,
+				84CB20F22D5ACCF200224EB8 /* RecipeViewModel.swift in Sources */,
 				84B6D32F2D488664009D8ECC /* FetchTakeHomeProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
