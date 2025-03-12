@@ -12,6 +12,7 @@ class RecipeViewModel: ObservableObject {
     @Published var filteredRecipes: [Recipe] = []
     @Published var isLoading = false
     @Published var error: Error?
+    private var currentSortOption: SortOption = .name // Track current sort option
     private let service = RecipeAPIService(baseURL: "https://d3jbb8n5wk0qxi.cloudfront.net/recipes.json")
     
     @MainActor func fetchRecipes() async {
@@ -21,6 +22,7 @@ class RecipeViewModel: ObservableObject {
         do {
             recipes = try await service.fetchRecipes().recipes
             filteredRecipes = recipes // Initialize filteredRecipes
+            sortRecipes(by: currentSortOption) // Reapply current sort
         } catch {
             self.error = error
             print("Failed to fetch recipes: \(error.localizedDescription)")
@@ -37,9 +39,11 @@ class RecipeViewModel: ObservableObject {
                 recipe.cuisine.localizedCaseInsensitiveContains(query)
             }
         }
+        sortRecipes(by: currentSortOption) // Maintain current sort after search
     }
     
     func sortRecipes(by option: SortOption) {
+        currentSortOption = option // Update current sort option
         switch option {
         case .name:
             filteredRecipes.sort { $0.name < $1.name }
