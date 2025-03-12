@@ -8,9 +8,32 @@
 import XCTest
 @testable import FetchTakeHomeProject
 
+// MARK: - Test Data
+extension Recipe {
+    static func mockRecipes() -> [Recipe] {
+        return [
+            Recipe(cuisine: "Italian", name: "Pizza", photoUrlLarge: "", photoUrlSmall: "", uuid: "1", sourceUrl: "", youtubeUrl: ""),
+            Recipe(cuisine: "Japanese", name: "Sushi", photoUrlLarge: "", photoUrlSmall: "", uuid: "2", sourceUrl: "", youtubeUrl: ""),
+            Recipe(cuisine: "American", name: "Apple Pie", photoUrlLarge: "", photoUrlSmall: "", uuid: "3", sourceUrl: "", youtubeUrl: ""),
+            Recipe(cuisine: "Italian", name: "Pasta", photoUrlLarge: "", photoUrlSmall: "", uuid: "4", sourceUrl: "", youtubeUrl: "")
+        ]
+    }
+}
+
 final class FetchTakeHomeProjectTests: XCTestCase {
+    var viewModel: RecipeViewModel!
+    
+    override func setUp() {
+        super.setUp()
+        viewModel = RecipeViewModel()
+    }
+    
+    override func tearDown() {
+        viewModel = nil
+        super.tearDown()
+    }
 
-
+    // MARK: - API Tests
     func testFetchRecipesSuccess() async throws {
         let apiService = RecipeAPIService(baseURL: "https://d3jbb8n5wk0qxi.cloudfront.net/recipes.json")
         do {
@@ -58,6 +81,7 @@ final class FetchTakeHomeProjectTests: XCTestCase {
         }
     }
 
+    // MARK: - Image Caching Tests
     func testImageCaching() {
         let cacheManager = ImageCacheManager.shared
         let testImage = UIImage(systemName: "star")!
@@ -81,4 +105,49 @@ final class FetchTakeHomeProjectTests: XCTestCase {
         XCTAssertNil(cachedImage, "Cached image should be nil for invalid data")
     }
 
+    // MARK: - Search Tests
+    func testSearchRecipesWithEmptyQuery() {
+        let mockRecipes = Recipe.mockRecipes()
+        viewModel.recipes = mockRecipes
+        
+        viewModel.searchRecipes(query: "")
+        
+        XCTAssertEqual(viewModel.filteredRecipes.count, mockRecipes.count, "Empty query should show all recipes")
+    }
+    
+    func testSearchRecipesByName() {
+        viewModel.recipes = Recipe.mockRecipes()
+        
+        viewModel.searchRecipes(query: "Pizza")
+        
+        XCTAssertEqual(viewModel.filteredRecipes.count, 1, "Should find one recipe")
+        XCTAssertEqual(viewModel.filteredRecipes.first?.name, "Pizza", "Should find Pizza recipe")
+    }
+    
+    func testSearchRecipesByCuisine() {
+        viewModel.recipes = Recipe.mockRecipes()
+        
+        viewModel.searchRecipes(query: "Italian")
+        
+        XCTAssertEqual(viewModel.filteredRecipes.count, 2, "Should find all Italian recipes")
+    }
+    
+    // MARK: - Sorting Tests
+    func testSortRecipesByName() {
+        viewModel.recipes = Recipe.mockRecipes()
+        viewModel.filteredRecipes = Recipe.mockRecipes()
+        
+        viewModel.sortRecipes(by: .name)
+        
+        XCTAssertEqual(viewModel.filteredRecipes.first?.name, "Apple Pie", "Should sort recipes by name")
+    }
+    
+    func testSortRecipesByCuisine() {
+        viewModel.recipes = Recipe.mockRecipes()
+        viewModel.filteredRecipes = Recipe.mockRecipes()
+        
+        viewModel.sortRecipes(by: .cuisine)
+        
+        XCTAssertEqual(viewModel.filteredRecipes.first?.cuisine, "American", "Should sort recipes by cuisine")
+    }
 }
