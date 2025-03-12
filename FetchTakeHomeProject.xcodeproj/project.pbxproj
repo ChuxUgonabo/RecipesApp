@@ -90,6 +90,8 @@
 		84B0F6BF2D82001A00BEA83D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8446D2922D5AF79900631302 /* RecipeListView.swift */,
+				84B6D3302D488664009D8ECC /* RecipeItemView.swift */,
 				84B0F6C42D820C7700BEA83D /* EmptyStateView.swift */,
 				84B0F6C52D820C7700BEA83D /* ErrorView.swift */,
 			);
@@ -120,8 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				84B6D32E2D488664009D8ECC /* FetchTakeHomeProjectApp.swift */,
-				8446D2922D5AF79900631302 /* RecipeListView.swift */,
-				84B6D3302D488664009D8ECC /* RecipeItemView.swift */,
 				84B0F6BF2D82001A00BEA83D /* Views */,
 				84CB20F52D5AF1FA00224EB8 /* ViewModels */,
 				84B6D35B2D4887CB009D8ECC /* Recipe */,
