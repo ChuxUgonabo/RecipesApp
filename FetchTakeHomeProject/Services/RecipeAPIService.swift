@@ -9,8 +9,12 @@ import Foundation
 
 class RecipeAPIService {
     
-    
-    private let baseURL = "https://d3jbb8n5wk0qxi.cloudfront.net/recipes.json"
+   
+    private let baseURL: String
+       
+       init(baseURL: String) {
+           self.baseURL = baseURL
+       }
 
     func fetchRecipes() async throws -> RecipeResponse {
         guard let url = URL(string: baseURL) else {

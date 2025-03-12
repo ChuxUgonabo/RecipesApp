@@ -10,7 +10,7 @@ import Foundation
 class RecipeViewModel: ObservableObject {
     @Published var recipes: [Recipe] = []
     @Published var isLoading = false
-    private let service = RecipeAPIService()
+    private let service = RecipeAPIService(baseURL: "https://d3jbb8n5wk0qxi.cloudfront.net/recipes.json")
     
     @MainActor func fetchRecipes() async {
         isLoading = true
