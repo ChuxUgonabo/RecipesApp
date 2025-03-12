@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8446D2932D5AF79900631302 /* RecipeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446D2922D5AF79900631302 /* RecipeListView.swift */; };
+		84B0F6C22D82004F00BEA83D /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B0F6C02D82004F00BEA83D /* ErrorView.swift */; };
+		84B0F6C32D82004F00BEA83D /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B0F6C12D82004F00BEA83D /* EmptyStateView.swift */; };
 		84B6D32F2D488664009D8ECC /* FetchTakeHomeProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6D32E2D488664009D8ECC /* FetchTakeHomeProjectApp.swift */; };
 		84B6D3312D488664009D8ECC /* RecipeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6D3302D488664009D8ECC /* RecipeItemView.swift */; };
 		84B6D3332D488667009D8ECC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B6D3322D488667009D8ECC /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		8446D2922D5AF79900631302 /* RecipeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListView.swift; sourceTree = "<group>"; };
+		84B0F6C02D82004F00BEA83D /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorView.swift; path = FetchTakeHomeProject/ErrorView.swift; sourceTree = SOURCE_ROOT; };
+		84B0F6C12D82004F00BEA83D /* EmptyStateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmptyStateView.swift; path = FetchTakeHomeProject/EmptyStateView.swift; sourceTree = SOURCE_ROOT; };
 		84B6D32B2D488664009D8ECC /* FetchTakeHomeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FetchTakeHomeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B6D32E2D488664009D8ECC /* FetchTakeHomeProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTakeHomeProjectApp.swift; sourceTree = "<group>"; };
 		84B6D3302D488664009D8ECC /* RecipeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeItemView.swift; sourceTree = "<group>"; };
@@ -83,6 +87,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84B0F6BF2D82001A00BEA83D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84B0F6C12D82004F00BEA83D /* EmptyStateView.swift */,
+				84B0F6C02D82004F00BEA83D /* ErrorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		84B6D3222D488663009D8ECC = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +122,7 @@
 				84B6D32E2D488664009D8ECC /* FetchTakeHomeProjectApp.swift */,
 				8446D2922D5AF79900631302 /* RecipeListView.swift */,
 				84B6D3302D488664009D8ECC /* RecipeItemView.swift */,
+				84B0F6BF2D82001A00BEA83D /* Views */,
 				84CB20F52D5AF1FA00224EB8 /* ViewModels */,
 				84B6D35B2D4887CB009D8ECC /* Recipe */,
 				84B6D3582D488755009D8ECC /* Services */,
@@ -301,11 +315,13 @@
 			files = (
 				84CB20F72D5AF2AB00224EB8 /* ImageLoader.swift in Sources */,
 				84B6D35A2D4887A3009D8ECC /* Recipe.swift in Sources */,
+				84B0F6C32D82004F00BEA83D /* EmptyStateView.swift in Sources */,
 				84B6D3312D488664009D8ECC /* RecipeItemView.swift in Sources */,
 				84CB20F42D5AE41000224EB8 /* ImageCacheManager.swift in Sources */,
 				84B6D35D2D4B4FE7009D8ECC /* RecipeAPIService.swift in Sources */,
 				84CB20F22D5ACCF200224EB8 /* RecipeViewModel.swift in Sources */,
 				8446D2932D5AF79900631302 /* RecipeListView.swift in Sources */,
+				84B0F6C22D82004F00BEA83D /* ErrorView.swift in Sources */,
 				84B6D32F2D488664009D8ECC /* FetchTakeHomeProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
