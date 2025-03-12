@@ -19,6 +19,7 @@
 		84B6D35D2D4B4FE7009D8ECC /* RecipeAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6D35C2D4B4FE7009D8ECC /* RecipeAPIService.swift */; };
 		84CB20F22D5ACCF200224EB8 /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CB20F12D5ACCF200224EB8 /* RecipeViewModel.swift */; };
 		84CB20F42D5AE41000224EB8 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CB20F32D5AE41000224EB8 /* ImageCacheManager.swift */; };
+		84CB20F72D5AF2AB00224EB8 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CB20F62D5AF2AB00224EB8 /* ImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		84B6D35C2D4B4FE7009D8ECC /* RecipeAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeAPIService.swift; sourceTree = "<group>"; };
 		84CB20F12D5ACCF200224EB8 /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
 		84CB20F32D5AE41000224EB8 /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
+		84CB20F62D5AF2AB00224EB8 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CB20F72D5AF2AB00224EB8 /* ImageLoader.swift in Sources */,
 				84B6D35A2D4887A3009D8ECC /* Recipe.swift in Sources */,
 				84B6D3312D488664009D8ECC /* RecipeItemView.swift in Sources */,
 				84CB20F42D5AE41000224EB8 /* ImageCacheManager.swift in Sources */,

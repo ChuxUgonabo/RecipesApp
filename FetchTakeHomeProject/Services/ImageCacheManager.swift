@@ -6,3 +6,36 @@
 //
 
 import Foundation
+import UIKit
+
+class ImageCacheManager {
+    static let shared = ImageCacheManager()
+    private let cache = NSCache<NSString, UIImage>()
+    private let fileManager = FileManager.default
+    private let cacheDirectory: URL
+    
+    private init() {
+        cacheDirectory = fileManager.urls(for: .cachesDirectory, in: .userDomainMask).first!
+    }
+    
+    func getImage(for urlString: String) -> UIImage? {
+        if let image = cache.object(forKey: urlString as NSString) {
+            return image
+        }
+        
+        let fileURL = cacheDirectory.appendingPathComponent(urlString.hash.description)
+        if let data = try? Data(contentsOf: fileURL), let image = UIImage(data: data) {
+            cache.setObject(image, forKey: urlString as NSString)
+            return image
+        }
+        return nil
+    }
+    
+    func cacheImage(_ image: UIImage, for urlString: String) {
+        cache.setObject(image, forKey: urlString as NSString)
+        let fileURL = cacheDirectory.appendingPathComponent(urlString.hash.description)
+        if let data = image.jpegData(compressionQuality: 1.0) {
+            try? data.write(to: fileURL)
+        }
+    }
+}
