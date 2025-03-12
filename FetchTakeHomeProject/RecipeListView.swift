@@ -35,17 +35,35 @@ struct RecipeListView: View {
                     recipeViewModel.sortRecipes(by: newValue)
                 }
                 
-                // Recipe List
-                List(recipeViewModel.filteredRecipes, id: \.uuid) { recipe in
-                    RecipeItemView(recipe: recipe)
+                // Content Area
+                ZStack {
+                    if recipeViewModel.isLoading {
+                        ProgressView()
+                    } else if let error = recipeViewModel.error {
+                        ErrorView(error: error) {
+                            Task {
+                                await recipeViewModel.fetchRecipes()
+                            }
+                        }
+                    } else if recipeViewModel.filteredRecipes.isEmpty {
+                        EmptyStateView(
+                            message: searchText.isEmpty ? 
+                                "No recipes available" : 
+                                "No recipes match your search"
+                        )
+                    } else {
+                        List(recipeViewModel.filteredRecipes, id: \.uuid) { recipe in
+                            RecipeItemView(recipe: recipe)
+                        }
+                        .refreshable {
+                            await recipeViewModel.fetchRecipes()
+                        }
+                    }
                 }
-                .refreshable {
-                    await recipeViewModel.fetchRecipes()
-                }
-                .navigationTitle("Recipes")
-                .task {
-                    await recipeViewModel.fetchRecipes()
-                }
+            }
+            .navigationTitle("Recipes")
+            .task {
+                await recipeViewModel.fetchRecipes()
             }
         }
     }
