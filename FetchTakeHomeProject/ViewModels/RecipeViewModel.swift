@@ -12,7 +12,7 @@ class RecipeViewModel: ObservableObject {
     @Published var isLoading = false
     private let service = RecipeAPIService()
     
-    func fetchRecipes() async {
+    @MainActor func fetchRecipes() async {
         isLoading = true
         defer { isLoading = false }
         
