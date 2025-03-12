@@ -9,6 +9,7 @@ import Foundation
 
 class RecipeViewModel: ObservableObject {
     @Published var recipes: [Recipe] = []
+    @Published var filteredRecipes: [Recipe] = []
     @Published var isLoading = false
     private let service = RecipeAPIService(baseURL: "https://d3jbb8n5wk0qxi.cloudfront.net/recipes.json")
     
@@ -18,8 +19,29 @@ class RecipeViewModel: ObservableObject {
         
         do {
             recipes = try await service.fetchRecipes().recipes
+            filteredRecipes = recipes // Initialize filteredRecipes
         } catch {
             print("Failed to fetch recipes: \(error.localizedDescription)")
+        }
+    }
+    
+    func searchRecipes(query: String) {
+        if query.isEmpty {
+            filteredRecipes = recipes
+        } else {
+            filteredRecipes = recipes.filter { recipe in
+                recipe.name.localizedCaseInsensitiveContains(query) ||
+                recipe.cuisine.localizedCaseInsensitiveContains(query)
+            }
+        }
+    }
+    
+    func sortRecipes(by option: SortOption) {
+        switch option {
+        case .name:
+            filteredRecipes.sort { $0.name < $1.name }
+        case .cuisine:
+            filteredRecipes.sort { $0.cuisine < $1.cuisine }
         }
     }
 }
