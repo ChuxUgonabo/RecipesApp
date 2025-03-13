@@ -20,8 +20,6 @@
 		84B6D3332D488667009D8ECC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B6D3322D488667009D8ECC /* Assets.xcassets */; };
 		84B6D3362D488667009D8ECC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B6D3352D488667009D8ECC /* Preview Assets.xcassets */; };
 		84B6D3402D488668009D8ECC /* FetchTakeHomeProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6D33F2D488668009D8ECC /* FetchTakeHomeProjectTests.swift */; };
-		84B6D34A2D488668009D8ECC /* FetchTakeHomeProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6D3492D488668009D8ECC /* FetchTakeHomeProjectUITests.swift */; };
-		84B6D34C2D488668009D8ECC /* FetchTakeHomeProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6D34B2D488668009D8ECC /* FetchTakeHomeProjectUITestsLaunchTests.swift */; };
 		84B6D35A2D4887A3009D8ECC /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6D3592D4887A3009D8ECC /* Recipe.swift */; };
 		84B6D35D2D4B4FE7009D8ECC /* RecipeAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6D35C2D4B4FE7009D8ECC /* RecipeAPIService.swift */; };
 		84CB20F22D5ACCF200224EB8 /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CB20F12D5ACCF200224EB8 /* RecipeViewModel.swift */; };
@@ -31,13 +29,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		84B6D33C2D488668009D8ECC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 84B6D3232D488663009D8ECC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 84B6D32A2D488664009D8ECC;
-			remoteInfo = FetchTakeHomeProject;
-		};
-		84B6D3462D488668009D8ECC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 84B6D3232D488663009D8ECC /* Project object */;
 			proxyType = 1;
@@ -62,9 +53,6 @@
 		84B6D3352D488667009D8ECC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		84B6D33B2D488668009D8ECC /* FetchTakeHomeProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchTakeHomeProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B6D33F2D488668009D8ECC /* FetchTakeHomeProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTakeHomeProjectTests.swift; sourceTree = "<group>"; };
-		84B6D3452D488668009D8ECC /* FetchTakeHomeProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchTakeHomeProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		84B6D3492D488668009D8ECC /* FetchTakeHomeProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTakeHomeProjectUITests.swift; sourceTree = "<group>"; };
-		84B6D34B2D488668009D8ECC /* FetchTakeHomeProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTakeHomeProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		84B6D3592D4887A3009D8ECC /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		84B6D35C2D4B4FE7009D8ECC /* RecipeAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeAPIService.swift; sourceTree = "<group>"; };
 		84CB20F12D5ACCF200224EB8 /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
@@ -81,13 +69,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		84B6D3382D488668009D8ECC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		84B6D3422D488668009D8ECC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -124,7 +105,6 @@
 			children = (
 				84B6D32D2D488664009D8ECC /* FetchTakeHomeProject */,
 				84B6D33E2D488668009D8ECC /* FetchTakeHomeProjectTests */,
-				84B6D3482D488668009D8ECC /* FetchTakeHomeProjectUITests */,
 				84B6D32C2D488664009D8ECC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -134,7 +114,6 @@
 			children = (
 				84B6D32B2D488664009D8ECC /* FetchTakeHomeProject.app */,
 				84B6D33B2D488668009D8ECC /* FetchTakeHomeProjectTests.xctest */,
-				84B6D3452D488668009D8ECC /* FetchTakeHomeProjectUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -169,15 +148,6 @@
 				84B6D33F2D488668009D8ECC /* FetchTakeHomeProjectTests.swift */,
 			);
 			path = FetchTakeHomeProjectTests;
-			sourceTree = "<group>";
-		};
-		84B6D3482D488668009D8ECC /* FetchTakeHomeProjectUITests */ = {
-			isa = PBXGroup;
-			children = (
-				84B6D3492D488668009D8ECC /* FetchTakeHomeProjectUITests.swift */,
-				84B6D34B2D488668009D8ECC /* FetchTakeHomeProjectUITestsLaunchTests.swift */,
-			);
-			path = FetchTakeHomeProjectUITests;
 			sourceTree = "<group>";
 		};
 		84B6D3582D488755009D8ECC /* Services */ = {
@@ -244,24 +214,6 @@
 			productReference = 84B6D33B2D488668009D8ECC /* FetchTakeHomeProjectTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		84B6D3442D488668009D8ECC /* FetchTakeHomeProjectUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 84B6D3552D488668009D8ECC /* Build configuration list for PBXNativeTarget "FetchTakeHomeProjectUITests" */;
-			buildPhases = (
-				84B6D3412D488668009D8ECC /* Sources */,
-				84B6D3422D488668009D8ECC /* Frameworks */,
-				84B6D3432D488668009D8ECC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				84B6D3472D488668009D8ECC /* PBXTargetDependency */,
-			);
-			name = FetchTakeHomeProjectUITests;
-			productName = FetchTakeHomeProjectUITests;
-			productReference = 84B6D3452D488668009D8ECC /* FetchTakeHomeProjectUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -276,10 +228,6 @@
 						CreatedOnToolsVersion = 14.2;
 					};
 					84B6D33A2D488668009D8ECC = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = 84B6D32A2D488664009D8ECC;
-					};
-					84B6D3442D488668009D8ECC = {
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = 84B6D32A2D488664009D8ECC;
 					};
@@ -300,7 +248,6 @@
 			targets = (
 				84B6D32A2D488664009D8ECC /* FetchTakeHomeProject */,
 				84B6D33A2D488668009D8ECC /* FetchTakeHomeProjectTests */,
-				84B6D3442D488668009D8ECC /* FetchTakeHomeProjectUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -321,13 +268,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		84B6D3392D488668009D8ECC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		84B6D3432D488668009D8ECC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -362,15 +302,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		84B6D3412D488668009D8ECC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				84B6D34A2D488668009D8ECC /* FetchTakeHomeProjectUITests.swift in Sources */,
-				84B6D34C2D488668009D8ECC /* FetchTakeHomeProjectUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -378,11 +309,6 @@
 			isa = PBXTargetDependency;
 			target = 84B6D32A2D488664009D8ECC /* FetchTakeHomeProject */;
 			targetProxy = 84B6D33C2D488668009D8ECC /* PBXContainerItemProxy */;
-		};
-		84B6D3472D488668009D8ECC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 84B6D32A2D488664009D8ECC /* FetchTakeHomeProject */;
-			targetProxy = 84B6D3462D488668009D8ECC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -599,42 +525,6 @@
 			};
 			name = Release;
 		};
-		84B6D3562D488668009D8ECC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7N78DM3797;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = jvcugonabo.ca.FetchTakeHomeProjectUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FetchTakeHomeProject;
-			};
-			name = Debug;
-		};
-		84B6D3572D488668009D8ECC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7N78DM3797;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = jvcugonabo.ca.FetchTakeHomeProjectUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FetchTakeHomeProject;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -661,15 +551,6 @@
 			buildConfigurations = (
 				84B6D3532D488668009D8ECC /* Debug */,
 				84B6D3542D488668009D8ECC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		84B6D3552D488668009D8ECC /* Build configuration list for PBXNativeTarget "FetchTakeHomeProjectUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				84B6D3562D488668009D8ECC /* Debug */,
-				84B6D3572D488668009D8ECC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

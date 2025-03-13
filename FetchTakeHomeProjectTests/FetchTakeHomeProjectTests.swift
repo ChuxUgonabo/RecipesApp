@@ -8,17 +8,6 @@
 import XCTest
 @testable import FetchTakeHomeProject
 
-// MARK: - Test Data
-extension Recipe {
-    static func mockRecipes() -> [Recipe] {
-        return [
-            Recipe(cuisine: "Italian", name: "Pizza", photoUrlLarge: "", photoUrlSmall: "", uuid: "1", sourceUrl: "", youtubeUrl: ""),
-            Recipe(cuisine: "Japanese", name: "Sushi", photoUrlLarge: "", photoUrlSmall: "", uuid: "2", sourceUrl: "", youtubeUrl: ""),
-            Recipe(cuisine: "American", name: "Apple Pie", photoUrlLarge: "", photoUrlSmall: "", uuid: "3", sourceUrl: "", youtubeUrl: ""),
-            Recipe(cuisine: "Italian", name: "Pasta", photoUrlLarge: "", photoUrlSmall: "", uuid: "4", sourceUrl: "", youtubeUrl: "")
-        ]
-    }
-}
 
 final class FetchTakeHomeProjectTests: XCTestCase {
     var viewModel: RecipeViewModel!
@@ -149,5 +138,17 @@ final class FetchTakeHomeProjectTests: XCTestCase {
         viewModel.sortRecipes(by: .cuisine)
         
         XCTAssertEqual(viewModel.filteredRecipes.first?.cuisine, "American", "Should sort recipes by cuisine")
+    }
+}
+
+// MARK: - Test Data
+extension Recipe {
+    static func mockRecipes() -> [Recipe] {
+        return [
+            Recipe(cuisine: "Italian", name: "Pizza", photoUrlLarge: "", photoUrlSmall: "", uuid: "1", sourceUrl: "", youtubeUrl: ""),
+            Recipe(cuisine: "Japanese", name: "Sushi", photoUrlLarge: "", photoUrlSmall: "", uuid: "2", sourceUrl: "", youtubeUrl: ""),
+            Recipe(cuisine: "American", name: "Apple Pie", photoUrlLarge: "", photoUrlSmall: "", uuid: "3", sourceUrl: "", youtubeUrl: ""),
+            Recipe(cuisine: "Italian", name: "Pasta", photoUrlLarge: "", photoUrlSmall: "", uuid: "4", sourceUrl: "", youtubeUrl: "")
+        ]
     }
 }

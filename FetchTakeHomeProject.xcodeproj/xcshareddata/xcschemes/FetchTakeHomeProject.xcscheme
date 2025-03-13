@@ -39,17 +39,6 @@
                ReferencedContainer = "container:FetchTakeHomeProject.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "84B6D3442D488668009D8ECC"
-               BuildableName = "FetchTakeHomeProjectUITests.xctest"
-               BlueprintName = "FetchTakeHomeProjectUITests"
-               ReferencedContainer = "container:FetchTakeHomeProject.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
